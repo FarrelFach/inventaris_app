@@ -3,14 +3,113 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/BottomNavbar.dart';
+import '../../../utils/Product.dart';
 import '../controllers/item_controller.dart';
 
 class ItemView extends GetView<ItemController> {
+  final itemController = Get.put(ItemController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(239, 242, 247, 1),
       bottomNavigationBar: BottomNavbar(),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                  right: 400, top: 10, bottom: 15, left: 18),
+              child: Text(
+                "Items",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 18, left: 18),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        contentPadding:
+                            const EdgeInsets.only(left: 40, right: 10),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: const BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        prefixIcon: const Icon(
+                          Icons.search,
+                          color: Colors.black,
+                        ),
+                        hintText: 'Search',
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 18),
+                        child: Text(
+                          "Sort by :",
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 7),
+                        child: Obx(
+                          () => DropdownButton<String>(
+                            value: itemController.selected.value == ""
+                                ? null
+                                : itemController.selected.value,
+                            onChanged: (newValue) {
+                              print(newValue);
+                              itemController.setSelected(newValue!);
+                            },
+                            items: itemController.items
+                                .map(
+                                  (e) => DropdownMenuItem(
+                                    value: e,
+                                    child: Text(e),
+                                  ),
+                                )
+                                .toList(),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Center(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Product(),
+                      Product(),
+                      Product(),
+                      Product(),
+                      Product(),
+                    ],
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
