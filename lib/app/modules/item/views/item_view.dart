@@ -12,17 +12,18 @@ class ItemView extends GetView<ItemController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(239, 242, 247, 1),
-      bottomNavigationBar: BottomNavbar(),
+      bottomNavigationBar: const BottomNavbar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                  right: 400, top: 10, bottom: 15, left: 18),
+            const Padding(
+              padding:
+                  EdgeInsets.only(right: 400, top: 10, bottom: 15, left: 18),
               child: Text(
                 "Items",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(
@@ -52,13 +53,13 @@ class ItemView extends GetView<ItemController> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 18),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 18),
                         child: Text(
                           "Sort by :",
                           style: TextStyle(
@@ -96,7 +97,7 @@ class ItemView extends GetView<ItemController> {
               child: Center(
                 child: SingleChildScrollView(
                   child: Column(
-                    children: [
+                    children: const [
                       Product(),
                       Product(),
                       Product(),

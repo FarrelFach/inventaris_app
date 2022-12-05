@@ -12,7 +12,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(239, 242, 247, 1),
-      bottomNavigationBar: BottomNavbar(),
+      bottomNavigationBar: const BottomNavbar(),
       body: SafeArea(
         child: Center(
           child: Container(
@@ -21,7 +21,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                color: Color.fromARGB(94, 80, 78, 78),
+                color: const Color.fromARGB(94, 80, 78, 78),
               ),
               color: Colors.white,
             ),
@@ -33,21 +33,21 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.arrow_back,
                         color: Colors.black,
                         size: 24,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Container(
                         height: 200,
                         width: 200,
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: NetworkImage(
                                   'https://i.imgur.com/APmrQQB.jpeg',
                                 ),
@@ -56,14 +56,14 @@ class ItemDetailView extends GetView<ItemDetailController> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
-                  padding:
-                      EdgeInsets.only(bottom: 3, left: 18, top: 3, right: 18),
+                  padding: const EdgeInsets.only(
+                      bottom: 3, left: 18, top: 3, right: 18),
                   width: Get.width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
                         color: Color.fromARGB(94, 80, 78, 78),
@@ -71,7 +71,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
                       ),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Beng-beng",
                     style: TextStyle(
                       fontSize: 20,
@@ -81,10 +81,10 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   ),
                 ),
                 Container(
-                  padding:
-                      EdgeInsets.only(bottom: 3, left: 18, top: 5, right: 18),
+                  padding: const EdgeInsets.only(
+                      bottom: 3, left: 18, top: 5, right: 18),
                   width: Get.width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
                         color: Color.fromARGB(94, 80, 78, 78),
@@ -94,7 +94,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text(
                         "Id: ",
                         style: TextStyle(
@@ -113,10 +113,10 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   ),
                 ),
                 Container(
-                  padding:
-                      EdgeInsets.only(bottom: 3, left: 18, top: 5, right: 18),
+                  padding: const EdgeInsets.only(
+                      bottom: 3, left: 18, top: 5, right: 18),
                   width: Get.width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
                         color: Color.fromARGB(94, 80, 78, 78),
@@ -126,7 +126,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text(
                         "Harga: ",
                         style: TextStyle(
@@ -145,10 +145,10 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   ),
                 ),
                 Container(
-                  padding:
-                      EdgeInsets.only(bottom: 3, left: 18, top: 5, right: 18),
+                  padding: const EdgeInsets.only(
+                      bottom: 3, left: 18, top: 5, right: 18),
                   width: Get.width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
                         color: Color.fromARGB(94, 80, 78, 78),
@@ -158,7 +158,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text(
                         "Stock: ",
                         style: TextStyle(
@@ -177,10 +177,10 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   ),
                 ),
                 Container(
-                  padding:
-                      EdgeInsets.only(bottom: 3, left: 18, top: 5, right: 18),
+                  padding: const EdgeInsets.only(
+                      bottom: 3, left: 18, top: 5, right: 18),
                   width: Get.width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
                         color: Color.fromARGB(94, 80, 78, 78),
@@ -190,7 +190,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text(
                         "Total Harga: ",
                         style: TextStyle(

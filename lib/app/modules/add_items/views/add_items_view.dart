@@ -14,9 +14,9 @@ class AddItemsView extends GetView<AddItemsController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: EdgeInsets.only(top: 18, left: 18),
+              padding: const EdgeInsets.only(top: 18, left: 18),
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     Icons.arrow_back,
                     color: Colors.black,
@@ -33,22 +33,22 @@ class AddItemsView extends GetView<AddItemsController> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 36,
             ),
             Container(
-              padding: EdgeInsets.only(left: 18, right: 18),
+              padding: const EdgeInsets.only(left: 18, right: 18),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Masukan Nama Barang :",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   TextField(
@@ -66,17 +66,17 @@ class AddItemsView extends GetView<AddItemsController> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Masukan Jumlah Barang :",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   TextField(
@@ -94,17 +94,17 @@ class AddItemsView extends GetView<AddItemsController> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Masukan Harga / Barang :",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   TextField(
@@ -122,17 +122,17 @@ class AddItemsView extends GetView<AddItemsController> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Unggah Foto Barang :",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   GestureDetector(
@@ -142,7 +142,7 @@ class AddItemsView extends GetView<AddItemsController> {
                       width: 90,
                       padding: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 255, 255, 255),
+                          color: const Color.fromARGB(255, 255, 255, 255),
                           borderRadius: BorderRadius.circular(10)),
                       child: const Center(
                         child: Icon(
@@ -168,10 +168,11 @@ class AddItemsView extends GetView<AddItemsController> {
                         width: 180,
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 255, 255, 255),
+                            color: const Color.fromARGB(255, 255, 255, 255),
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                                color: Color.fromRGBO(98, 142, 156, 100))),
+                                color:
+                                    const Color.fromRGBO(98, 142, 156, 100))),
                         child: const Center(
                           child: Text(
                             "Delete",
@@ -194,10 +195,11 @@ class AddItemsView extends GetView<AddItemsController> {
                         width: 180,
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                            color: Color.fromRGBO(98, 142, 156, 100),
+                            color: const Color.fromRGBO(98, 142, 156, 100),
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                                color: Color.fromARGB(255, 255, 255, 255))),
+                                color:
+                                    const Color.fromARGB(255, 255, 255, 255))),
                         child: const Center(
                           child: Text(
                             "Save",
