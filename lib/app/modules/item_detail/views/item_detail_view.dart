@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/BottomNavbar.dart';
+import '../../home/views/home_view.dart';
+import '../../item/views/item_view.dart';
 import '../controllers/item_detail_controller.dart';
 
 class ItemDetailView extends GetView<ItemDetailController> {
@@ -34,7 +36,12 @@ class ItemDetailView extends GetView<ItemDetailController> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       GestureDetector(
-                        onTap: () => Get.toNamed('/item'),
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return ItemView();
+                          }));
+                        },
                         child: const Icon(
                           Icons.arrow_back,
                           color: Colors.black,
