@@ -33,10 +33,13 @@ class ItemDetailView extends GetView<ItemDetailController> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(
-                        Icons.arrow_back,
-                        color: Colors.black,
-                        size: 24,
+                      GestureDetector(
+                        onTap: () => Get.toNamed('/item'),
+                        child: const Icon(
+                          Icons.arrow_back,
+                          color: Colors.black,
+                          size: 24,
+                        ),
                       ),
                       const SizedBox(
                         width: 10,

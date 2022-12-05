@@ -16,11 +16,14 @@ class AddItemsView extends GetView<AddItemsController> {
             Container(
               padding: const EdgeInsets.only(top: 18, left: 18),
               child: Row(
-                children: const [
-                  Icon(
-                    Icons.arrow_back,
-                    color: Colors.black,
-                    size: 24,
+                children: [
+                  GestureDetector(
+                    onTap: () => Get.toNamed('/item'),
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Colors.black,
+                      size: 24,
+                    ),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -165,7 +168,7 @@ class AddItemsView extends GetView<AddItemsController> {
                       onTap: () {},
                       child: Container(
                         height: 70,
-                        width: 180,
+                        width: 150,
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 255, 255, 255),
@@ -192,7 +195,7 @@ class AddItemsView extends GetView<AddItemsController> {
                       onTap: () {},
                       child: Container(
                         height: 70,
-                        width: 180,
+                        width: 150,
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
                             color: const Color.fromRGBO(98, 142, 156, 100),

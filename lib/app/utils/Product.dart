@@ -75,10 +75,10 @@ class Product extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 200),
+            SizedBox(width: 100),
             Padding(
               padding: const EdgeInsets.only(right: 8),
-              child: Container(
+              child: Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [

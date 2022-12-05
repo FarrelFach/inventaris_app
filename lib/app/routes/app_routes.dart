@@ -7,6 +7,8 @@ abstract class Routes {
   static const ITEM = _Paths.ITEM;
   static const ADD_ITEMS = _Paths.ADD_ITEMS;
   static const ITEM_DETAIL = _Paths.ITEM_DETAIL;
+  static const HISTORY = _Paths.HISTORY;
+  static const PROFILE = _Paths.PROFILE;
 }
 
 abstract class _Paths {
@@ -15,4 +17,6 @@ abstract class _Paths {
   static const ITEM = '/item';
   static const ADD_ITEMS = '/add-items';
   static const ITEM_DETAIL = '/item-detail';
+  static const HISTORY = '/history';
+  static const PROFILE = '/profile';
 }

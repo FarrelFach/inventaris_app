@@ -17,13 +17,16 @@ class ItemView extends GetView<ItemController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
+            Padding(
               padding:
-                  EdgeInsets.only(right: 400, top: 10, bottom: 15, left: 18),
-              child: Text(
-                "Items",
-                style:
-                    const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  EdgeInsets.only(right: 18, top: 10, bottom: 15, left: 18),
+              child: GestureDetector(
+                onTap: () => Get.toNamed('/item-detail'),
+                child: Text(
+                  "Items",
+                  style: const TextStyle(
+                      fontSize: 24, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             SizedBox(
@@ -109,6 +112,14 @@ class ItemView extends GetView<ItemController> {
               ),
             )
           ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Get.toNamed('/add-items'),
+        backgroundColor: Color.fromRGBO(98, 142, 156, 100),
+        child: Icon(
+          Icons.add,
+          color: Colors.black,
         ),
       ),
     );

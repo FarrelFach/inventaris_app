@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:inventaris_app/app/modules/home/views/home_view.dart';
 
+import '../modules/history/views/history_view.dart';
 import '../modules/item/views/item_view.dart';
+import '../modules/profile/views/profile_view.dart';
 
 class BottomNavbar extends StatelessWidget {
   const BottomNavbar({
@@ -44,10 +46,20 @@ class BottomNavbar extends StatelessWidget {
               GButton(
                 icon: Icons.history,
                 text: "History",
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return HistoryView();
+                  }));
+                },
               ),
               GButton(
                 icon: Icons.person,
                 text: "Profile",
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return ProfileView();
+                  }));
+                },
               )
             ]),
       ),
